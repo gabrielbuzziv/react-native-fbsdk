@@ -19,7 +19,7 @@
 #import "RCTFBSDKLoginButtonManager.h"
 
 #import <React/RCTBridge.h>
-#import <React/RCTComponentEvent.h>
+// #import <React/RCTComponentEvent.h>
 #import <React/RCTEventDispatcher.h>
 #import <React/RCTUtils.h>
 #import <React/UIView+React.h>
@@ -69,10 +69,10 @@ RCT_CUSTOM_VIEW_PROPERTY(tooltipBehaviorIOS, FBSDKLoginButtonTooltipBehavior, FB
     },
   };
 
-  RCTComponentEvent *event = [[RCTComponentEvent alloc] initWithName:@"topChange"
-                                                             viewTag:loginButton.reactTag
-                                                                body:body];
-  [self.bridge.eventDispatcher sendEvent:event];
+  // RCTComponentEvent *event = [[RCTComponentEvent alloc] initWithName:@"topChange"
+  //                                                            viewTag:loginButton.reactTag
+  //                                                               body:body];
+  // [self.bridge.eventDispatcher sendEvent:event];
 }
 
 - (void)loginButtonDidLogOut:(FBSDKLoginButton *)loginButton
@@ -81,10 +81,10 @@ RCT_CUSTOM_VIEW_PROPERTY(tooltipBehaviorIOS, FBSDKLoginButtonTooltipBehavior, FB
     @"type": @"logoutFinished",
   };
 
-  RCTComponentEvent *event = [[RCTComponentEvent alloc] initWithName:@"topChange"
-                                                             viewTag:loginButton.reactTag
-                                                                body:body];
-  [self.bridge.eventDispatcher sendEvent:event];
+  // RCTComponentEvent *event = [[RCTComponentEvent alloc] initWithName:@"topChange"
+  //                                                            viewTag:loginButton.reactTag
+  //                                                               body:body];
+  // [self.bridge.eventDispatcher sendEvent:event];
 }
 
 @end
